@@ -20,3 +20,41 @@ const BotsCards = ({ bot, enlistBot, releaseBot, dischargeBot, isEnlisted }) => 
           enlistBot(id); // If not enlisted, enlist the bot
         }
       };
+      // Function to handle the discharge of a bot
+  const handleDischarge = () => {
+    if (window.confirm(`Are you sure you want to discharge ${name}?`)) {
+      dischargeBot(id); // Confirm with the user and then discharge the bot
+    }
+  };
+// components jsx that will be rendared
+   return(
+    <div onClick={handleClick} >
+        <div>
+        <img
+         src={avatar_url}
+         alt={name}
+        
+        />
+         <h3>Name: {name}</h3>
+          <p>Class: {bot_class}</p>
+          <p>Health: {health}</p>
+          <p>Damage: {damage}</p>
+          <p>Armor: {armor}</p>
+          <p>Catchphrase: {catchphrase}</p>
+          {isEnlisted?(
+            <button onclick={handleDischarge}>
+                X
+            </button>
+            ) : (
+                <button >Enlist</button>
+              )}
+          
+
+        </div>
+
+    </div>
+
+   ) 
+            }
+            
+            export default BotsCards;
