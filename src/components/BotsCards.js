@@ -46,8 +46,9 @@ const BotsCards = ({ bot, enlistBot, releaseBot, dischargeBot, isEnlisted }) => 
                 X
             </button>
             ) : (
-                <button >Enlist</button>
+                <button onClick={handleClick}>Enlist</button>
               )}
+            
           
 
         </div>
@@ -55,6 +56,6 @@ const BotsCards = ({ bot, enlistBot, releaseBot, dischargeBot, isEnlisted }) => 
     </div>
 
    ) 
-            }
+      }
             
-            export default BotsCards;
+export default BotsCards;

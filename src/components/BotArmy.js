@@ -1,17 +1,17 @@
 import React from "react";
 import BotsCards from "./BotsCards";
 
-const BotArmy = ({ yourBotArmy, releaseBot, dischargeBot }) => {
+const YourBotArmy = ({ yourBotArmy, releaseBot, dischargeBot }) => {
     return (
-        <div className="container-fluid">
-          <div className="row">
+        <div >
+          <div >
             {yourBotArmy.map((bot) => (
               <BotsCards
                 key={bot.id}
                 bot={bot}
                 releaseBot={releaseBot}
                 dischargeBot={dischargeBot}
-                isEnlisted={true}// aboolian value set to true
+                isEnlisted={true}// aboolian value set
               />
             ))}
             </div>
@@ -19,4 +19,4 @@ const BotArmy = ({ yourBotArmy, releaseBot, dischargeBot }) => {
   );
 };
 
-export default BotArmy;
+export default YourBotArmy;

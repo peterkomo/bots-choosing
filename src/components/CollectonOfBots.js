@@ -1,7 +1,7 @@
 import React from "react";
 import BotsCards from "./BotsCards";
  
-const CollectionOfBots=({bots,enlist,yourBotArmy})=>{
+const CollectionOfBots=({bots,enlistBot,yourBotArmy})=>{
     return(
         <div>
             <div>
@@ -9,10 +9,9 @@ const CollectionOfBots=({bots,enlist,yourBotArmy})=>{
                     <BotsCards
                     key={bot.id}// A unique identifier for each bot card (using the bot's ID).
                     bot={bot}// The individual bot object, containing all bot details.
-                    enlistBot={enlistBot}//A function to enlist the bot into the user's army.
-                    yourBotArmy={yourBotArmy}/>//A boolean value indicating whether the bot is enlisted in the user's army. 
-               
-               ))}
+                    enlistBot={enlistBot}
+                    yourBotArmy={yourBotArmy}/>
+                ))}
             </div>
         </div>
     )

@@ -1,5 +1,5 @@
 import React,{useState,useEffect} from "react";
-import BotsCards from "./components/BotsCards";
+//import BotsCards from "./components/BotsCards";
 import BotArmy from "./components/BotArmy";
 import CollectionOfBots from "./components/CollectonOfBots";
 
@@ -12,7 +12,7 @@ const [yourBotArmy, setYourBotArmy] = useState([]);
  // useEffect hook to fetch bots from the backend on component mount
  useEffect(() => {
   // Fetch bots from the backend
-  fetch("https://api.npoint.io/725e93b04b51723612b0/bots")
+  fetch(" http://localhost:3000/bots")
   .then((resp) => resp.json())
   .then((data) => setBots(data))
   .catch((error) => {
@@ -39,7 +39,7 @@ const releaseBot = (botId) => {
 // Function to discharge a bot (remove from yourBotArmy and backend)
 const dischargeBot = (botId) => {
   // Delete the bot from the backend
-  fetch(`https://api.npoint.io/725e93b04b51723612b0/bots/${botId}`, {
+  fetch(`http://localhost:3000/bots/${botId}`, {
     method: "DELETE",
   })
     .then((response) => {
@@ -77,3 +77,4 @@ return (
   </div>
 );
 };
+export default App
