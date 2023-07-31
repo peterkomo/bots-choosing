@@ -6,12 +6,12 @@ const BotArmy = ({ yourBotArmy, releaseBot, dischargeBot }) => {
         <div className="container-fluid">
           <div className="row">
             {yourBotArmy.map((bot) => (
-              <BotCard
+              <BotsCards
                 key={bot.id}
                 bot={bot}
                 releaseBot={releaseBot}
                 dischargeBot={dischargeBot}
-                isEnlisted={true}
+                isEnlisted={true}// aboolian value set to true
               />
             ))}
             </div>
@@ -19,4 +19,4 @@ const BotArmy = ({ yourBotArmy, releaseBot, dischargeBot }) => {
   );
 };
 
-export default YourBotArmy;
+export default BotArmy;
