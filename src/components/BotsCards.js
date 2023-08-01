@@ -28,8 +28,8 @@ const BotsCards = ({ bot, enlistBot, releaseBot, dischargeBot, isEnlisted }) => 
   };
 // components jsx that will be rendared
    return(
-    <div onClick={handleClick} >
-        <div>
+    <div onClick={handleClick} className="col-lg-3">
+        <div className="card">
         <img
          src={avatar_url}
          alt={name}

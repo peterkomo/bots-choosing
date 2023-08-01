@@ -59,14 +59,14 @@ const dischargeBot = (botId) => {
 // rendering components with the correct props 
 return (
   <div>
-    <h1 className="mt-3">Welcome to Flatiron Bots</h1>
-    <h2>My Hack Bot</h2>
+    <h1 className="mt-3">TRANSFORMARS ARMY BOTS</h1>
+    <h2>BOTS 2.O</h2>
     <BotArmy
       yourBotArmy={yourBotArmy}
       releaseBot={releaseBot}
       dischargeBot={dischargeBot}
     />
-    <h2>Crew Bots</h2>
+    <h2 className="text-center">ARMYTRICKS</h2>
     <CollectionOfBots
       bots={bots}
       enlistBot={enlistBot}

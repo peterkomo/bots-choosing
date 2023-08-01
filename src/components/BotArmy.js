@@ -3,8 +3,8 @@ import BotsCards from "./BotsCards";
 
 const YourBotArmy = ({ yourBotArmy, releaseBot, dischargeBot }) => {
     return (
-        <div >
-          <div >
+        <div className="container-fluid">
+          <div className="row">
             {yourBotArmy.map((bot) => (
               <BotsCards
                 key={bot.id}
